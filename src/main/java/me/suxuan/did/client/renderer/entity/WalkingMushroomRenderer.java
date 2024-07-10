@@ -1,8 +1,11 @@
-package me.suxuan.did.entity.walking_mushroom;
+package me.suxuan.did.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import me.suxuan.did.DeliciousDungeon;
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.DID;
+import me.suxuan.did.client.ModClient;
+import me.suxuan.did.client.model.entity.WalkingMushroomModel;
+import me.suxuan.did.entity.ModEntities;
+import me.suxuan.did.entity.monster.WalkingMushroomEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -11,10 +14,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class WalkingMushroomRenderer extends MobRenderer<WalkingMushroomEntity, WalkingMushroomModel<WalkingMushroomEntity>> {
 
-	private static final ResourceLocation TEXTURE = new ResourceLocation(DeliciousDungeon.MOD_ID, "textures/entity/walking_mushroom.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation(DID.MOD_ID, "textures/entity/walking_mushroom.png");
 
 	public WalkingMushroomRenderer(EntityRendererProvider.Context context) {
-		super(context, new WalkingMushroomModel<>(context.bakeLayer(DIDEntities.WALKING_MUSHROOM_LAYER)), 0.4F);
+		super(context, new WalkingMushroomModel<>(context.bakeLayer(ModClient.WALKING_MUSHROOM_LAYER)), 0.4F);
 	}
 
 	@Override

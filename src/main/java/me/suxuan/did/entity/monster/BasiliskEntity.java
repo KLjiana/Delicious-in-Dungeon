@@ -1,6 +1,6 @@
-package me.suxuan.did.entity.basilisk;
+package me.suxuan.did.entity.monster;
 
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.entity.ModEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -14,7 +14,7 @@ public class BasiliskEntity extends Animal {
 	private final AnimationState runAnimationState = new AnimationState();
 	private int runAnimationTicks;
 
-	public BasiliskEntity(EntityType type, Level level) {
+	public BasiliskEntity(EntityType<? extends Animal> type, Level level) {
 		super(type, level);
 	}
 
@@ -38,7 +38,7 @@ public class BasiliskEntity extends Animal {
 	@Nullable
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob pOtherParent) {
-		return DIDEntities.BASILISK.get().create(level);
+		return ModEntities.BASILISK.get().create(level);
 	}
 
 	@Override

@@ -1,7 +1,8 @@
-package me.suxuan.did.entity.mimic;
+package me.suxuan.did.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import me.suxuan.did.entity.monster.MimicEntity;
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;

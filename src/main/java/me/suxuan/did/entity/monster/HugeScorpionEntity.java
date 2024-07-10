@@ -1,6 +1,6 @@
-package me.suxuan.did.entity.mimic;
+package me.suxuan.did.entity.monster;
 
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.entity.ModEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -9,12 +9,12 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class MimicEntity extends Animal {
+public class HugeScorpionEntity extends Animal {
 
 	private final AnimationState runAnimationState = new AnimationState();
 	private int runAnimationTicks;
 
-	public MimicEntity(EntityType type, Level level) {
+	public HugeScorpionEntity(EntityType type, Level level) {
 		super(type, level);
 	}
 
@@ -38,7 +38,7 @@ public class MimicEntity extends Animal {
 	@Nullable
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob pOtherParent) {
-		return DIDEntities.MIMIC.get().create(level);
+		return ModEntities.HUGE_SCORPION.get().create(level);
 	}
 
 	@Override

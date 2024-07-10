@@ -1,9 +1,11 @@
-package me.suxuan.did.entity.basilisk;
+package me.suxuan.did.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import me.suxuan.did.DeliciousDungeon;
+import me.suxuan.did.DID;
+import me.suxuan.did.client.ModClient;
 import me.suxuan.did.client.model.entity.BasiliskModel;
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.entity.ModEntities;
+import me.suxuan.did.entity.monster.BasiliskEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -12,10 +14,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class BasiliskRenderer extends MobRenderer<BasiliskEntity, BasiliskModel<BasiliskEntity>> {
 
-	private static final ResourceLocation TEXTURE = new ResourceLocation(DeliciousDungeon.MOD_ID, "textures/entity/basilisk.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation(DID.MOD_ID, "textures/entity/basilisk.png");
 
 	public BasiliskRenderer(EntityRendererProvider.Context context) {
-		super(context, new BasiliskModel<>(context.bakeLayer(DIDEntities.BASILISK_LAYER)), 0.4F);
+		super(context, new BasiliskModel<>(context.bakeLayer(ModClient.BASILISK_LAYER)), 0.4F);
 	}
 
 	@Override

@@ -1,9 +1,11 @@
-package me.suxuan.did.entity.huge_scorpion;
+package me.suxuan.did.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import me.suxuan.did.DeliciousDungeon;
+import me.suxuan.did.DID;
+import me.suxuan.did.client.ModClient;
 import me.suxuan.did.client.model.entity.HugeScorpionModel;
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.entity.ModEntities;
+import me.suxuan.did.entity.monster.HugeScorpionEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -12,10 +14,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class HugeScorpionRenderer extends MobRenderer<HugeScorpionEntity, HugeScorpionModel<HugeScorpionEntity>> {
 
-	private static final ResourceLocation TEXTURE = new ResourceLocation(DeliciousDungeon.MOD_ID, "textures/entity/huge_scorpion.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation(DID.MOD_ID, "textures/entity/huge_scorpion.png");
 
 	public HugeScorpionRenderer(EntityRendererProvider.Context context) {
-		super(context, new HugeScorpionModel<>(context.bakeLayer(DIDEntities.HUGE_SCORPION_LAYER)), 0.4F);
+		super(context, new HugeScorpionModel<>(context.bakeLayer(ModClient.HUGE_SCORPION_LAYER)), 0.4F);
 	}
 
 	@Override

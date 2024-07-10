@@ -1,4 +1,4 @@
-package me.suxuan.did.entity.living_armor;
+package me.suxuan.did.entity.monster;
 
 import net.minecraft.core.Direction;
 import net.minecraft.network.syncher.EntityDataAccessor;

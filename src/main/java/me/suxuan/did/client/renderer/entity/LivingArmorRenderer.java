@@ -1,8 +1,11 @@
-package me.suxuan.did.entity.living_armor;
+package me.suxuan.did.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import me.suxuan.did.DeliciousDungeon;
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.DID;
+import me.suxuan.did.client.ModClient;
+import me.suxuan.did.client.model.entity.LivingArmorModel;
+import me.suxuan.did.entity.ModEntities;
+import me.suxuan.did.entity.monster.LivingArmorEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -10,11 +13,11 @@ import net.minecraft.resources.ResourceLocation;
 
 public class LivingArmorRenderer extends MobRenderer<LivingArmorEntity, LivingArmorModel<LivingArmorEntity>> {
 
-	private static final ResourceLocation TEXTURE = new ResourceLocation(DeliciousDungeon.MOD_ID,
+	private static final ResourceLocation TEXTURE = new ResourceLocation(DID.MOD_ID,
 			"textures/entity/living_armor.png");
 
 	public LivingArmorRenderer(EntityRendererProvider.Context context) {
-		super(context, new LivingArmorModel<>(context.bakeLayer(DIDEntities.LIVING_ARMOR_LAYER)), 0.4F);
+		super(context, new LivingArmorModel<>(context.bakeLayer(ModClient.LIVING_ARMOR_LAYER)), 0.4F);
 	}
 
 	@Override

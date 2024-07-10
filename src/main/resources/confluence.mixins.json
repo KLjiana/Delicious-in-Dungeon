@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "me.suxuan.did",
+  "refmap": "did.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [],
+  "minVersion": "0.8.5",
+  "client": []
+}

@@ -1,8 +1,11 @@
-package me.suxuan.did.entity.mimic;
+package me.suxuan.did.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import me.suxuan.did.DeliciousDungeon;
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.DID;
+import me.suxuan.did.client.ModClient;
+import me.suxuan.did.client.model.entity.MimicModel;
+import me.suxuan.did.entity.ModEntities;
+import me.suxuan.did.entity.monster.MimicEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -11,10 +14,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class MimicRenderer extends MobRenderer<MimicEntity, MimicModel<MimicEntity>> {
 
-	private static final ResourceLocation TEXTURE = new ResourceLocation(DeliciousDungeon.MOD_ID, "textures/entity/mimic.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation(DID.MOD_ID, "textures/entity/mimic.png");
 
 	public MimicRenderer(EntityRendererProvider.Context context) {
-		super(context, new MimicModel<>(context.bakeLayer(DIDEntities.MIMIC_LAYER)), 0.4F);
+		super(context, new MimicModel<>(context.bakeLayer(ModClient.MIMIC_LAYER)), 0.4F);
 	}
 
 	@Override

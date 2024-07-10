@@ -1,6 +1,6 @@
-package me.suxuan.did.entity.huge_scorpion;
+package me.suxuan.did.entity.monster;
 
-import me.suxuan.did.entity.DIDEntities;
+import me.suxuan.did.entity.ModEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -9,12 +9,12 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class HugeScorpionEntity extends Animal {
+public class WalkingMushroomEntity extends Animal {
 
 	private final AnimationState runAnimationState = new AnimationState();
 	private int runAnimationTicks;
 
-	public HugeScorpionEntity(EntityType type, Level level) {
+	public WalkingMushroomEntity(EntityType type, Level level) {
 		super(type, level);
 	}
 
@@ -38,7 +38,7 @@ public class HugeScorpionEntity extends Animal {
 	@Nullable
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob pOtherParent) {
-		return DIDEntities.HUGE_SCORPION.get().create(level);
+		return ModEntities.WALKING_MUSHROOM.get().create(level);
 	}
 
 	@Override

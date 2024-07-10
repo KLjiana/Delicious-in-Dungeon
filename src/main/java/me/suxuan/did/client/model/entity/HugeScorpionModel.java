@@ -2,7 +2,7 @@ package me.suxuan.did.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import me.suxuan.did.entity.huge_scorpion.HugeScorpionEntity;
+import me.suxuan.did.entity.monster.HugeScorpionEntity;
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;
